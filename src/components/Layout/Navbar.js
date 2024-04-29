@@ -1,4 +1,4 @@
-import {  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./Navbar.module.css";
 // import { useDispatch, useSelector } from "react-redux";
 // import { authActions } from "../../store/AuthSlice";
@@ -16,6 +16,7 @@ const Navbar = () => {
       <header className={classes.header}>
         <nav>
           <ul>
+          <li> <Link to='/compose'>Compose</Link></li>
 
             {(
               <button

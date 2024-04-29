@@ -56,7 +56,7 @@ const AuthPage = () => {
   
             dispatch(authActions.login({ idToken: data.idToken, email: data.email }));
   
-  
+            navigate('/compose')
             setIsLoading(false);
           } catch (err) {
             alert(err.message);
@@ -64,7 +64,7 @@ const AuthPage = () => {
   
           emailRef.current.value = "";
           passwordRef.current.value = "";
-          navigate('/dash');
+          navigate('/compose');
         };
   
   return (
