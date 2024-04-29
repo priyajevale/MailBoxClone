@@ -11,7 +11,7 @@ const AuthPage = () => {
     const passwordRef = useRef();
 
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [isLogin, setIsLogin] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -64,6 +64,7 @@ const AuthPage = () => {
   
           emailRef.current.value = "";
           passwordRef.current.value = "";
+          navigate('/dash');
         };
   
   return (

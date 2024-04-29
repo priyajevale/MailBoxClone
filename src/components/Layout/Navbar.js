@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import classes from "./Navbar.module.css";
 // import { useDispatch, useSelector } from "react-redux";
 // import { authActions } from "../../store/AuthSlice";
@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const loginHandler = () => {
 
-    navigate("/");
+    navigate("/dash");
   };
   return (
     <>
