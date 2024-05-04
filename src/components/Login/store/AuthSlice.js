@@ -17,10 +17,12 @@ const AuthSlice = createSlice({
       localStorage.setItem("token", state.idToken);
     },
     logout(state) {
+      localStorage.removeItem("idToken");
+      localStorage.removeItem("email");
       state.idToken = null;
       state.isAuthenticated = false;
       state.email = null;
-      localStorage.removeItem("idToken");
+      // localStorage.removeItem("idToken");
     },
   },
 });
