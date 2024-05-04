@@ -153,6 +153,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { useSelector } from "react-redux";
 import axios from "axios";
 const ComposeMail = () =>{
+  
 const emailRef = useRef();
     const subjectRef = useRef();
     const editorRef = useRef();
@@ -244,7 +245,7 @@ const emailRef = useRef();
              />
              <Form.Label>Body:</Form.Label>
              <Editor
-     
+      placeholder="enter your text here!"
               // editorState={editorState}
               editorState={editorState}
               editorClassName="editorClassName"

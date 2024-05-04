@@ -254,7 +254,7 @@ ref={passwordRef}
         />
       </FloatingLabel>
 
-      {!isLogin && <FloatingLabel controlId="confirmPassword" label="Confirm Password" className="mb-3">
+      {/* {!isLogin && <FloatingLabel controlId="confirmPassword" label="Confirm Password" className="mb-3">
         <Form.Control
           type="password"
           placeholder="Confirm Password"
@@ -262,7 +262,7 @@ ref={passwordRef}
 
           required
         />
-      </FloatingLabel>}
+      </FloatingLabel>} */}
       {isLogin && (
             <Button variant="link" onClick={forgotPasswordHandler}>
               Forgot Password?

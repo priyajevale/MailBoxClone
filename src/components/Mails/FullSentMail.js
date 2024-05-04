@@ -38,9 +38,12 @@ const FullSentMail = () => {
 
   return (
     <div className="main">
-      <h3 className="emailSender">From: {email.from}</h3>
+      {/* <h3 className="emailSender">From: {email.from}</h3>
       <h2 className="emailsubject">{email.subject}</h2>
-      <p className="email-content">{email.content}</p>
+      <p className="email-content">{email.content}</p> */}
+       <h3 className="Sender">From: {email.from}</h3>
+      <h2 className="subject">{email.subject}</h2>
+      <p className="content">{email.content}</p>
       <button className="backBtn" onClick={() => navigate("/sent")}>
         Back
       </button>

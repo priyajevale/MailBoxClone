@@ -23,7 +23,7 @@ import { deleteSentEmail,fetchSentEmailsSuccess } from "../Login/store/SentSlice
           if (response.status === 200) {
             const fetchedEmails = [];
             for (const key in response.data) {
-              console.log('res data', response.data)
+              // console.log('res data', response.data)
               fetchedEmails.push({
                 id: key,
                 ...response.data[key],
@@ -40,7 +40,7 @@ import { deleteSentEmail,fetchSentEmailsSuccess } from "../Login/store/SentSlice
       }
   
       fetchSentEmails();
-    }, [dispatch,myEmail]);
+    }, [dispatch, myEmail, isLoggedIn]);
   
     const handleDelete = async (emailId, event) => {
       event.stopPropagation();
@@ -78,14 +78,16 @@ import { deleteSentEmail,fetchSentEmailsSuccess } from "../Login/store/SentSlice
               <p className="email-content">{email.content}</p>
   
               <div className="delTime">
+              <p className="email-time">{email.time}</p>
                 <button
-                  className="delEmailBtn"
+                  // className="delEmailBtn"
+                  className="deleteBtn"
                   onClick={(event) => handleDelete(email.id, event)}
                 >
                   Delete
                 </button>
   
-                <p className="email-time">{email.time}</p>
+                {/* <p className="email-time">{email.time}</p> */}
               </div>
             </li>
           ))}
