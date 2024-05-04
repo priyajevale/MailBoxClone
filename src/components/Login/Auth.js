@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
 import { useRef } from 'react';
@@ -7,15 +6,16 @@ import { authActions } from './store/AuthSlice';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css'
 const AuthPage = () => {
+  const navigate = useNavigate();
     const emailRef = useRef();
     const passwordRef = useRef();
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [isLogin, setIsLogin] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-  
+
     const switchAuthModeHandler = () => {
         setIsLogin((prevState) => !prevState);
       };
@@ -27,7 +27,9 @@ const AuthPage = () => {
           }
           const enteredEmail = emailRef.current.value;
           const enteredPassword = passwordRef.current.value;
-  
+          // navigate('/dash');
+
+          
           setIsLoading(true);
           let url;
           if (!isLogin) {
@@ -48,25 +50,27 @@ const AuthPage = () => {
               headers: { "Content-type": "application/json" },
             });
             const data = await res.json();
+           
             setIsLoading(false);
             console.log("user has successfully signed up")
             if (!res.ok) {
               throw new Error(data.error?.message || "Authentication failed");
             }
-  
+
             dispatch(authActions.login({ idToken: data.idToken, email: data.email }));
-  
-            navigate('/compose')
+
+
             setIsLoading(false);
+            navigate('/compose')
           } catch (err) {
             alert(err.message);
           }
-  
+
           emailRef.current.value = "";
           passwordRef.current.value = "";
           navigate('/compose');
         };
-  
+
   return (
      <div className="formbody">
     <div className="col-md-3 p-3 border">

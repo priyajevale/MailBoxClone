@@ -118,7 +118,7 @@ const ComposeMail = () => {
   {/* <Button variant="outline-dark" onClick={() => navigate("/home")}>
     X
   </Button> */}
-  
+
   <Button variant="outline-dark" onClick={() => navigate("/home")}>
     X
   </Button>

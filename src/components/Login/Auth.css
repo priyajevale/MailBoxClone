@@ -1,18 +1,18 @@
 .formbody{
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-  }
-  h1 {
-    text-align: center;
-   color: #007bff;
-  }
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+h1 {
+  text-align: center;
+ color: #007bff;
+}
 
-  .signup_link {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .btn-block {
-    border-radius: 20px;
-    width: 100%;
+.signup_link {
+  margin-top: 20px;
+  text-align: center;
+}
+.btn-block {
+  border-radius: 20px;
+  width: 100%;
 }

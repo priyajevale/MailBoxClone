@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import classes from "./Navbar.module.css";
 // import { useDispatch, useSelector } from "react-redux";
 // import { authActions } from "../../store/AuthSlice";
+import ComposeMail from "../compose/ComposeMail";
 
 const Navbar = () => {
 
@@ -9,6 +10,8 @@ const Navbar = () => {
 
   const loginHandler = () => {
 
+
+    // navigate("/");
     navigate("/dash");
   };
   return (
@@ -17,7 +20,6 @@ const Navbar = () => {
         <nav>
           <ul>
           <li> <Link to='/compose'>Compose</Link></li>
-
             {(
               <button
                 className={classes.loginbtn} onClick={loginHandler}
